@@ -3,7 +3,10 @@
 
 const green = require('chalk').green
 const inquirer = require('inquirer')
+const server = require('./server')
 const utils = require('./utils')
+
+server.start()
 
 function prompt () {
   /* Inquirer documentation: https://github.com/SBoudrias/Inquirer.js#documentation */
@@ -27,6 +30,7 @@ function prompt () {
 }
 
 console.log('Welcome to the Jobcoin mixer!')
+
 prompt()
 
 module.exports = prompt
